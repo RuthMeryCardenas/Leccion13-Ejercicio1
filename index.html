@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Lección 13 - Ejercicio 1</title>
+  <link rel="stylesheet" href="assets/css/master.css">
+</head>
+<body>
+  <h1>REGISTRO DE DATOS PERSONALES</h1>
+  <section>
+    <form onsubmit="return false;"><!-- onsubmit=" obtenerDatos();return false" -->
+      <div class="">
+        <label for="name">Nombre</label><br/>
+        <input id="name" type="text" required/>
+      </div><br/>
+      <div class="">
+        <label for="lastname">Apellidos</label><br/>
+        <input id="lastname" type="text" required/>
+      </div><br/>
+      <div class=""> 
+        <label for="dni">DNI</label><br/>
+        <input id="dni" type="text" pattern="^[0-9]{8}$" required>
+      </div><br/>
+      <div class="">
+        <label for="address" required>Direccion</label><br/>
+        <input id="address" type="text" required>
+      </div><br/>
+      <button id="enviarDatos">Enviar Datos</button>
+    </form>
+    <div id="board" style="margin-top: 25px">
+    </div>
+    <script type="text/javascript" src= "assets/js/main.js"></script>
+  </section>
+</body>
+</html>
