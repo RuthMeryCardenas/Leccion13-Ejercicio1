@@ -1,6 +1,13 @@
-var imprimirDatos = document.getElementById('enviarDatos');
-imprimirDatos.onclick = function (){
-    var card = "";
+//Obtener el nodo boton 'enviarDatos' del HTML
+var printData = document.getElementById('enviarDatos');
+//Funcion que reinicia el formulario, limpia los valores ingresados
+function cleanForm() {
+    //Obtener el nodo formulario "dataSheet" y
+    document.getElementById("dataSheet").reset();
+  }
+//Asociar al evento onclick la impresión de los datos obtenidos
+printData.onclick = function (){
+    var card;
     var name = document.getElementById('name').value;
     var lastName = document.getElementById('lastname').value;
     var dni = document.getElementById('dni').value;
@@ -12,5 +19,6 @@ imprimirDatos.onclick = function (){
            "<li>Direccion: "+address+"</li>"+
            "</ul>";
     board.innerHTML = card;
+    cleanForm();
     //return false;
   }
